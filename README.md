@@ -2,7 +2,6 @@
 
 An intelligent AI-powered code analysis assistant built with **LangGraph**, **Model Context Protocol (MCP)**, **FastAPI**, and **Streamlit**. Get instant insights, bug detection, code reviews, and intelligent explanations for any codebase.
 
-![Code Assistant Demo](https://via.placeholder.com/800x400.png?text=Code+Assistant+AI+Demo)
 
 ## 🎯 Problem Statement
 
@@ -85,7 +84,7 @@ Developers spend countless hours:
 | **Backend** | FastAPI (Python 3.11) |
 | **Frontend** | Streamlit |
 | **Code Analysis** | Radon, AST, Tree-sitter |
-| **Deployment** | Render (Backend) + Streamlit Cloud (Frontend) |
+
 
 ## 📦 Installation
 
@@ -217,41 +216,6 @@ The agent will:
    - Improvement suggestions
    - Best practices recommendations
 
-## 🌐 Deployment
-
-### Deploy Backend to Render
-
-1. Push your code to GitHub
-2. Connect to Render: https://render.com
-3. Create new Web Service
-4. Use `render.yaml` configuration
-5. Add environment variables (API keys)
-6. Deploy!
-
-### Deploy Frontend to Streamlit Cloud
-
-1. Push to GitHub
-2. Go to https://streamlit.io/cloud
-3. Create new app
-4. Point to `frontend/app.py`
-5. Add secrets (API_URL pointing to Render backend)
-6. Deploy!
-
-### Environment Variables for Deployment
-
-**Render (Backend):**
-```
-OPENAI_API_KEY=your-key
-LLM_PROVIDER=openai
-LLM_MODEL=gpt-4-turbo-preview
-```
-
-**Streamlit Cloud (Frontend):**
-```toml
-# .streamlit/secrets.toml
-API_URL = "https://your-render-backend.onrender.com"
-```
-
 ## 📊 How MCP Improves Context Awareness
 
 ### Before MCP:
@@ -285,7 +249,6 @@ Agent Synthesizes:
   - "Found 3 critical issues in auth.py:45, auth.py:78..."
   - "Recent commit added unsafe password handling..."
 ```
-
 
 
 ## 🧪 Testing
